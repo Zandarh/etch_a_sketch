@@ -18,15 +18,15 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center; 
-    gap: 20px;
+    gap: 15px;
 }
 .heading{
-    padding: 15px;
+    padding: 10px;
 }
 
 .heading h1{
     text-align: center;
-    font-size: 1.4em;
+    font-size: 2em;
     color: #344e41;
 }
 .sketchDiv{
@@ -68,7 +68,7 @@ button{
     border: 2px solid #344e41;
 
 }
-.modeButtons:hover{
+.disabled{
     background-color: transparent;
     color: grey;
     border: 0.2px solid grey;
@@ -76,7 +76,7 @@ button{
 .eraser{
     background-color: #344e41;
     color: #ffff;
-    border: 2px solid #344e41;
+
 }
 .clearButton{
     background-color: rgb(110, 10, 10);
@@ -86,4 +86,8 @@ h3{
     color: #344e41;
     font-size: 1em;
     text-align: center;
+}
+.pickerHeading, 
+.modesHeading{
+    margin-bottom: 5px;
 }
