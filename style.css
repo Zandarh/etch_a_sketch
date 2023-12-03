@@ -91,3 +91,11 @@ h3{
 .modesHeading{
     margin-bottom: 5px;
 }
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    color: #344e41;
+}
