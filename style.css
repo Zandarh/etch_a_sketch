@@ -98,7 +98,7 @@ body{
 }
 
 button{
-    font-size: 25px;
+    font-size: 18px;
     padding: 8px;
     border-radius: 10px;
 }
@@ -107,7 +107,7 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 .theModesButton{
     display: flex;
@@ -124,7 +124,7 @@ button{
     border: 0.2px solid grey;
 }
 .eraser, .clearButton{
-    font-size: 30px;
+    font-size: 15px;
 }
 .eraser{
     background-color: #344e41;
@@ -149,5 +149,5 @@ footer{
     color: #344e41;
 }
 footer p{
-    font-size: 25px;
+    font-size: 12px;
 }
