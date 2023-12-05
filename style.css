@@ -7,9 +7,8 @@
 
 body{
     display: flex;
-    flex-direction: column;
-    align-items: center;
     height: 100vh;
+    width: 100%;
     background-color: #dad7cd;
 }
 .container{
@@ -18,24 +17,56 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center; 
-    gap: 15px;
+    gap: 25px;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 .heading{
-    padding: 10px;
+    padding: 20px;
 }
 
 .heading h1{
     text-align: center;
-    font-size: 2em;
+    font-size: 3.9em;
     color: #344e41;
 }
-.sketchDiv{
-    border: 1px solid #344e41;
-    height: 30%;
-    width: 60%;
-    background-color: #ffff;
+
+.grid{
+    background-color: #ffffff;
     box-shadow: 2px 2px 2px 2px grey;
     cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 400px;
+}
+.gridDiv{
+    border: 1px solid black;
+    height: 25px;
+    width: 25x;   
+}
+.grid>div:nth-child(16n + 1){
+    width: 100%;
+    border: 0;
+    height: 0;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.theColorPicker{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    
 }
 .theColorPicker input{
     -webkit-appearance: none;
@@ -46,6 +77,7 @@ body{
     border: none;
     background-color: transparent;
     cursor: pointer;
+    
 }
 .theColorPicker input:hover{
     transform: scale(1.2);
@@ -58,10 +90,18 @@ body{
     border-radius: 50%;
     border: none;
 }
+
 button{
-    font-size: 20px;
+    font-size: 35px;
     padding: 8px;
     border-radius: 10px;
+}
+.theModes{
+    margin: auto;
+}
+.modesHeading{
+    margin-bottom: 15px;
+    text-align: center;
 }
 .modeButtons{
     background-color: #ffff;
@@ -72,6 +112,9 @@ button{
     background-color: transparent;
     color: grey;
     border: 0.2px solid grey;
+}
+.eraser, .clearButton{
+    font-size: 30px;
 }
 .eraser{
     background-color: #344e41;
@@ -84,13 +127,12 @@ button{
 }
 h3{
     color: #344e41;
-    font-size: 1em;
-    text-align: center;
+    font-size: 1.5em;
 }
-.pickerHeading, 
-.modesHeading{
-    margin-bottom: 5px;
+.changeMakers{
+    margin: auto;
 }
+
 footer{
     position: fixed;
     width: 100%;
