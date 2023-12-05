@@ -141,3 +141,6 @@ footer{
     text-align: center;
     color: #344e41;
 }
+footer p{
+    font-size: 25px;
+}
