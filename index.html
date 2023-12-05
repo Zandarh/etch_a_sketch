@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch A Sketch</title>
+    <link rel="shortcut icon" href="favicon.ico" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,9 +25,13 @@
                 <input type="color" name="colorPicker" id="colorPicker" value="#6e1ea4">
             </div>
             <div class="theModes">
-                <h3 class="modesHeading">Switch Modes</h3>
-                <button class="modeButtons">Single Color</button>
-                <button class="disabled" >Random Color</button>
+                <div class="theModesHeading">
+                    <h3 class="modesHeading">Switch Modes</h3>
+                </div>
+                <div class="theModesButton">
+                    <button class="modeButtons">Single Color</button>
+                    <button class="disabled" >Random Color</button>
+                </div>
             </div>
             <div class="changeMakers">
                 <button class="eraser">Eraser</button>
@@ -35,7 +40,14 @@
         </div>
     </div>
     <footer>
-        <p>Copyright@2023 <a href="https://github.com/zandarh">Zandarh</a></p>
+        <p>Copyright@
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+        </p>
+            <a href="https://github.com/zandarh">Zandarh
+                <i class="fab fa-github"></i>
+            </a>
     </footer>
     <script src="main.js"></script>
 </body>

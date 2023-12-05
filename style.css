@@ -10,16 +10,18 @@ body{
     height: 100vh;
     width: 100%;
     background-color: #dad7cd;
+    justify-content: center;
 }
 .container{
+    border: red 1px solid;
     width: 90%;
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     gap: 25px;
 }
 .right{
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +34,7 @@ body{
 
 .heading h1{
     text-align: center;
-    font-size: 3.9em;
+    font-size: 1.7em;
     color: #344e41;
 }
 
@@ -42,13 +44,13 @@ body{
     cursor: pointer;
     display: flex;
     flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
 }
 .gridDiv{
     border: 1px solid black;
-    height: 25px;
-    width: 25x;   
+    height: 18px;
+    width: 18px;   
 }
 .grid>div:nth-child(16n + 1){
     width: 100%;
@@ -56,8 +58,11 @@ body{
     height: 0;
 }
 .left{
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
 }
 .theColorPicker{
@@ -92,17 +97,21 @@ body{
 }
 
 button{
-    font-size: 35px;
+    font-size: 25px;
     padding: 8px;
     border-radius: 10px;
 }
 .theModes{
-    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
-.modesHeading{
-    margin-bottom: 15px;
-    text-align: center;
+.theModesButton{
+    display: flex;
 }
+
 .modeButtons{
     background-color: #ffff;
     border: 2px solid #344e41;
@@ -127,10 +136,7 @@ button{
 }
 h3{
     color: #344e41;
-    font-size: 1.5em;
-}
-.changeMakers{
-    margin: auto;
+    font-size: 0.9em;
 }
 
 footer{
