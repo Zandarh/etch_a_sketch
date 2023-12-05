@@ -45,13 +45,13 @@ body{
     cursor: pointer;
     display: flex;
     flex-wrap: wrap;
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 .gridDiv{
     border: 1px solid black;
-    height: 18.8px;
-    width: 18.8px;   
+    height: 15.6px;
+    width: 15.6x;   
 }
 .grid>div:nth-child(16n + 1){
     width: 100%;
@@ -64,7 +64,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 5px;
 }
 .theColorPicker{
     display: flex;
