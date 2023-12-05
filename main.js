@@ -1,34 +1,38 @@
 // Gobal variable
 let defaultColor = "#6e1ea4";
 let activeMode = "Single Color";
-const rainbowArray = [];
 
 // Accessing the html nodes
-
 const colorPicker = document.querySelector("#colorPicker");
-
-//The modes
 const clearButton = document.querySelector(".clearButton");
+const singleMode = document.querySelector(".modeButtons");
+const rainbowMode = document.querySelector(".disabled");
+const eraser = document.querySelector(".eraser");
+
+
+// Clearing all the grid colors
 clearButton.addEventListener("click", () => {
     const gridDiv = document.querySelectorAll(".gridDiv");
-    gridDiv.forEach((oneDiv) => {
-        oneDiv.style.backgroundColor = "#ffffff";
+    gridDiv.forEach((eachDiv) => {
+        eachDiv.style.backgroundColor = "#ffffff";
     });
 });
 
-const singleMode = document.querySelector(".modeButtons");
+
+//Accessing the modes click event
+// The single Color Mode
 singleMode.addEventListener("click", () => {
     activeMode = singleMode.value;
     switchModes(activeMode);
 });
 
-const rainbowMode = document.querySelector(".disabled");
+// The rainbow mode 
 rainbowMode.addEventListener("click", () => {
     activeMode = rainbowMode.value;
     switchModes(activeMode);
 });
 
-const eraser = document.querySelector(".eraser");
+//The erase mode
 eraser.addEventListener("click", () => {
     activeMode = eraser.value;
     switchModes(activeMode);
@@ -50,7 +54,7 @@ function switchModes(activeMode){
     }
 }
 
-
+// Building the grid
 function gridMaker(size){
     const div = document.querySelector(".grid");
 
@@ -63,6 +67,7 @@ function gridMaker(size){
      div.appendChild(gridDiv);
     }
 }
+
 // checks which mode is active
 function checkMode(e){
     const theDivElement = e.target;
@@ -71,7 +76,7 @@ function checkMode(e){
         changeDivColor(theDivElement, defaultColor);
     }
     else if(activeMode == rainbowMode.value)
-        rainbowDivColor(theDivElement, rainbowArray);
+        rainbowDivColor(theDivElement);
     else{
         eraseColor(theDivElement);
     }
@@ -82,6 +87,8 @@ function getColor(){
     let currentColor = colorPicker.value;
     return currentColor;
 }
+
+
 // changes the color of the clicked div with the single color mode
 function changeDivColor(theDivElement, defaultColor) {
     theDivElement.style.backgroundColor = defaultColor;
@@ -89,7 +96,7 @@ function changeDivColor(theDivElement, defaultColor) {
 
 
 // changes the color using a random color
-function rainbowDivColor(theDivElement, rainbowArray){
+function rainbowDivColor(theDivElement){
     let randOne = Math.floor(Math.random() * 256);
     let randTwo = Math.floor(Math.random() * 256);
     let randThree = Math.floor(Math.random() * 256);
@@ -103,6 +110,5 @@ function eraseColor(theDivElement){
     defaultColor = "#ffffff"
     theDivElement.style.backgroundColor = defaultColor;
 }
-
 
 gridMaker(16);
