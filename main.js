@@ -62,8 +62,8 @@ function gridMaker(size){
      const gridDiv = document.createElement("div");
      gridDiv.setAttribute("class", "gridDiv");
      gridDiv.setAttribute("style", "flex-grow: 1");
-     gridDiv.addEventListener("mouseover", checkMode);
      gridDiv.addEventListener("mousedown", checkMode);
+     gridDiv.addEventListener("mouseover", checkMode);
      div.appendChild(gridDiv);
     }
 }
